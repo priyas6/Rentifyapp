@@ -26,7 +26,7 @@ const Login = () => {
       alert("Invalid user details")
       else
       {
-        if (response[1]=='0')
+        if (response[1]==='0')
         Navigate("/Buyer/Properties",{ state: { "userId": response[0] } })
         else
         Navigate("/MyProperties",{state: { "userId": response[0] }})

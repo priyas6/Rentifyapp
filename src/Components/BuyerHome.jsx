@@ -1,6 +1,5 @@
 import React, { useEffect ,useState} from 'react'
 import { getOwner, getProperties } from '../Services/Api'
-import { useLocation } from 'react-router-dom';
 function BuyerHome() {
  
     const [properties, setProperties] = useState([]);
