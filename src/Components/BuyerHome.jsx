@@ -5,6 +5,7 @@ function BuyerHome() {
     const [properties, setProperties] = useState([]);
     const[owner,setOwner]=useState([])
     const [isSelected,setSelected]=useState(false)
+    const [propid,setpropid]=useState()
     useEffect(()=>{
         fetchProperties()
     },[])
@@ -15,9 +16,9 @@ function BuyerHome() {
         setProperties(arr)
 
     }
-    const getOwnerdetails=async(userId)=>
+    const getOwnerdetails=async(userId,propId)=>
     {
-
+      setpropid(propId)
       const arr2=await getOwner(userId);
       setOwner(arr2);
       console.log(arr2);
@@ -28,7 +29,7 @@ function BuyerHome() {
   return (
 
       <div className="my-properties-container">
-      <h2>Properties for you </h2>
+      <h2>Properties For You </h2>
       <div className="property-list">
         {
           properties.map(property => (
@@ -41,9 +42,9 @@ function BuyerHome() {
                 <p>Location: {property.location}</p>
                 <p>Nearby: {property.nearBy}</p>
                 <h2>Price: Rs.{property.price}</h2>
-                <button style={{ textAlign: "right" }} onClick={() => getOwnerdetails(property.userId)}>I am Interested</button>
+                <button style={{ textAlign: "right" }} onClick={() => getOwnerdetails(property.userId,property.propertyId)}>I am Interested</button>
               </div>
-              {isSelected && (
+              {isSelected &&  property.propertyId===propid && (
             <div className='owner-details'>
             <p>Email:{owner[0].email}</p>
             <p>Name:{owner[0].firstName+" "+owner[0].LastName}</p>
