@@ -10,6 +10,7 @@ function MyProperties(props) {
   const navigate = useNavigate();
   useEffect(()=>{
     fetchProperties()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 },[])
 
 const fetchProperties=async()=>
