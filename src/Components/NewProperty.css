@@ -1,0 +1,33 @@
+.property-form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .property-form-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .property-form-container input[type="text"],
+  .property-form-container input[type="number"],
+  .property-form-container textarea {
+    width: 80%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .property-form-container textarea {
+    height: 100px; /* Adjust height as needed */
+  }
+  
+  .property-form-container input[type="submit"],
+  .property-form-container .large-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; 
+  }
