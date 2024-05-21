@@ -28,7 +28,7 @@ function BuyerHome() {
   return (
 
       <div className="my-properties-container">
-      <h2>My Properties</h2>
+      <h2>Properties for you </h2>
       <div className="property-list">
         {
           properties.map(property => (
