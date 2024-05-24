@@ -25,7 +25,9 @@ function Register() {
         "password": password,
         
       }
+      window.alert("Please wait while we register you with us");
       await registerUser(data)
+      window.alert = function () {}
       navigate("/login")
 
   };
